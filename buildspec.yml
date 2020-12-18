@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto8
+  pre_build:
+    commands:
+      - echo BUILD_STARTED
+  build:
+    commands:
+      - ./gradlew clean build
+  post_build:
+    commands:
+      - echo BUILD_FINISHED
+artifacts:
+  files:
+    - build/libs/onex-front-rest-0.0.2.jar
