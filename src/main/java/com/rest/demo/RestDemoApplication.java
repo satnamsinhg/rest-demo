@@ -14,6 +14,11 @@ public class RestDemoApplication {
 		return "welcome to rest demo";
 	}
 
+	@GetMapping("/hello")
+	public String hello(){
+		return "Hello World";
+	}
+
 	public static void main(String[] args) {
 		SpringApplication.run(RestDemoApplication.class, args);
 	}
